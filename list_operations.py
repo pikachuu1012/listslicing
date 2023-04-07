@@ -25,7 +25,7 @@ def tail(input_list):
 
     """
 
-    return intput_list[1:]
+    return input_list[1:]
 
 
 def last(input_list):
@@ -78,7 +78,7 @@ def last_five(input_list):
 
     """
 
-    return input-list[:5]
+    return input_list[:-5]
 
 
 def middle(input_list):
@@ -90,8 +90,10 @@ def middle(input_list):
     [6, 9, 12, 15, 18, 21]
 
     """
+    l1 = input_list[2:]
+    l2 = l1[:-2]
+    return l2
 
-    return []
 
 
 def inner_four(input_list):
@@ -104,7 +106,7 @@ def inner_four(input_list):
 
     """
 
-    return []
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -119,8 +121,10 @@ def inner_four_end(input_list):
     [12, 15, 18, 21]
 
     """
+   
+    return input_list[4:8]
 
-    return []
+    
 
 
 def replace_head(input_list):
@@ -136,7 +140,7 @@ def replace_head(input_list):
     [42, 3, 6, 9, 12, 15, 18, 21, 24, 27]
 
     """
-
+    input_list[0] = 42
     pass
 
 
@@ -153,7 +157,8 @@ def replace_third_and_last(input_list):
     [0, 3, 37, 9, 12, 15, 18, 21, 24, 37]
 
     """
-
+    input_list[-1] = 37
+    input_list[2]=37
     pass
 
 
@@ -168,8 +173,11 @@ def backwards(input_list):
     ['May', 'Apr', 'Mar', 'Feb', 'Jan']
 
     """
+   a [::-1]
 
     pass
+
+
 
 
 def every_other(input_list):
@@ -181,7 +189,12 @@ def every_other(input_list):
     ['Jan', 'Mar', 'May']
 
     """
+    b = []
 
+    for i in range(0, 5):
+        if i % 2 == 0:
+            b.append(input_list[i])
+    return b
     pass
 
 
@@ -198,6 +211,11 @@ def delete_third_and_seventh(input_list):
     ['Do', 'Re', 'Fa', 'So', 'La', 'Do']
 
     """
+    thing3 = input_list[2]
+    thing7 = input_list[6]
+    input_list.remove(thing3)
+    input_list.remove(thing7)
+
 
     pass
 
@@ -213,6 +231,11 @@ def indices_of_positive_numbers(input_list):
     [0, 2, 3, 6]
 
     """
+    b = []
+    for i in len(input_list):
+        if i >= 0:
+            b.append(input_list[i])
+    return b
 
     pass
 
@@ -229,5 +252,5 @@ def sum_repeats(input_list):
     7
 
     """
-
+    
     pass
